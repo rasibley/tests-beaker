@@ -32,7 +32,7 @@ rlJournalStart
     rlRun -l "printenv"
     rlRun -l "wget https://gitlab.com/cki-project/loooooookaside/raw/master/dacapo-9.12-MR1-bach.jar"
         if [ $? -ne 0 ]; then
-            rstrnt-abort --server $RECIPE_URL/tasks/$TASKID/status
+            rstrnt-abort --server $RSTRNT_RECIPE_URL/tasks/$TASKID/status
             exit 0
         fi
     rlRun -l "java -jar dacapo-9.12-MR1-bach.jar eclipse jython lusearch-fix"
