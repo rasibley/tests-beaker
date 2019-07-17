@@ -29,6 +29,7 @@
 rlJournalStart
 # Run DaCapo Benchmarks
  rlPhaseStartTest
+    rlRun -l "printenv"
     rlRun -l "wget https://gitlab.com/cki-project/loooooookaside/raw/master/dacapo-9.12-MR1-bach.jar"
         if [ $? -ne 0 ]; then
             rstrnt-abort --server $RECIPE_URL/tasks/$TASKID/status
